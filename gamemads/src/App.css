@@ -31,3 +31,65 @@
     transform: rotate(360deg);
   }
 }
+
+.redRightMenu{
+  background: #b70400;
+  width: 600px;
+  height: 130vh;
+  transform:scale(0.9);
+  transform-origin: 0 0;
+  position:fixed ;
+  overflow: hidden;
+  top:-140px;
+  left:-600px;
+  /*overflow: hidden;*/
+}
+.mainBack{
+  background: black;
+  width: 100vw;
+  height: 100vh;
+}
+.mt5vw{
+  margin-top: 5vw;
+}
+.menuIcon{
+  position: absolute;
+  top: 5vw;
+  left:3vw;
+}
+.menuIconTop{
+  position: absolute;
+}
+.menuIconCenter{
+  position: absolute;
+  top: 3vh;
+  transform: scale(0.6, 1); /* Equal to scaleX(2) scaleY(0.5) */
+  transform-origin: left;
+  /*width: 80%;*/
+  align-items: center;
+}
+.menuIconButton{
+  position:absolute ;
+  top: 6vh;
+}
+.menuText{
+    color: white!important;
+    position: absolute;
+    top: 5vw;
+    left:1.3vw;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: bold;
+    font-size: 1.4vw;
+}
+.menuText2{
+    color: white!important;
+    position: absolute;
+    top: 8vw;
+    left:13.5em;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: bold;
+    font-size: 1.4vw;
+    transform: rotate(15deg);
+}
