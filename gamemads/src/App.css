@@ -45,17 +45,18 @@
   /*overflow: hidden;*/
 }
 .mainBack{
-  background: black;
+  /*background: black;*/
   width: 100vw;
-  height: 100vh;
+  /*height: 500vh;*/
 }
 .mt5vw{
   margin-top: 5vw;
 }
 .menuIcon{
-  position: absolute;
+  position: fixed;
   top: 5vw;
   left:3vw;
+    z-index: 9999;
 }
 .menuIconTop{
   position: absolute;
@@ -75,8 +76,8 @@
 .menuText{
     color: white!important;
     position: absolute;
-    top: 5vw;
-    left:1.3vw;
+    top: 0 ;
+    left:-1.5vw;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     font-weight: bold;
@@ -85,11 +86,138 @@
 .menuText2{
     color: white!important;
     position: absolute;
-    top: 8vw;
-    left:13.5em;
+    top:3vw;
+    left:11.5em;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     font-weight: bold;
     font-size: 1.4vw;
     transform: rotate(15deg);
+}
+.firstPage{
+    background: url(img/1234/1234/2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.topFirstPage{
+    /*height: 40em;*/
+    width: 100vw;
+    /*position: absolute;*/
+    /*top: -2em;*/
+    /*left: 0;*/
+    /*position: relative;*/
+}
+.ButtonFirstPage{
+    position: absolute;
+    top: 84vh;
+    width: 100vw;
+    /*height: 20vh;*/
+    left: 0;
+    z-index: 999999999;
+}
+.ButtonFirstPage2{
+    position: absolute;
+    top: 84vh;
+    width: 100vw;
+    /*height: 20vh;*/
+    left: 0;
+    z-index: 999999999;
+}
+.secondPage{
+    background: url(img/1234/1234/2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.topSecondPage{
+    z-index: 99;
+    /*height: 40em;*/
+    width: 100vw;
+    /*height: 30vh;*/
+    /*position: absolute;*/
+    /*top: -2em;*/
+    /*left: 0;*/
+    /*position: relative;*/
+}
+.videoPageTwo{
+    width:100vw;
+    height: 80vh;
+    /*z-index: 999999;*/
+    position: absolute;
+    top: 20vh;
+}
+/*.container-first {*/
+    /*display: flex;*/
+    /*height: 80em;*/
+    /*width: 50em;*/
+/*}*/
+
+/*.Tilt {*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*transform-style: preserve-3d;*/
+/*}*/
+
+/*.Tilt-inner {*/
+    /*transform: translateZ(100px);*/
+    /*!*font-size: 100px;*!*/
+    /*object-fit: cover;*/
+/*}*/
+/*.flowers{*/
+    /*transform: scale(0.3)*/
+/*}*/
+.Tilt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 500px;
+    /*background-color: #7e56ff;*/
+    /*background: url(img/1234/1234/324.png) no-repeat center center fixed;*/
+    /*box-shadow: 0 20px 27px rgba(0, 0, 0, 0.05);*/
+    transform-style: preserve-3d;
+    position: absolute;
+    left:10em;
+    /*overflow: hidden;*/
+}
+
+.Tilt-inner {
+    transform: translateZ(100px);
+    overflow: hidden;
+    /*background: url(img/1234/1234/324.png) no-repeat center center fixed;*/
+    /*font-size: 100px;*/
+}
+.flowers{
+    /*background: url(img/1234/1234/324.png) no-repeat center center fixed;*/
+    /*transform: scale(0.8);*/
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: -22em;
+    transform-origin: 0 0;
+
+
+}
+
+.man{
+    position: absolute;
+    top:-23em;
+    left: 12em;
+    transform: scale(0.5)
+}
+.font{
+    position: absolute;
+    top: 35vh;
+    left: 2em;
 }

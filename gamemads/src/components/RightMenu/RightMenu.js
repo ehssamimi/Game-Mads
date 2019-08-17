@@ -5,8 +5,14 @@ class RightMenu extends Component {
     constructor(props) {
         super(props);
         this.state={
-            toggel:false
-        }
+            toggel:false,
+
+        };
+        this.menuIcon = React.createRef();
+    }
+    componentDidMount(){
+        const $textMenu2 = document.getElementById(`textMenu2`);
+        TweenMax.to($textMenu2, 1/16, {opacity:0,ease: Back.easeIn.config(1.7)});
     }
 
     handelMoveRightMenu(){
@@ -20,6 +26,7 @@ class RightMenu extends Component {
             TweenMax.to($el, duration, from);
 
             const $elMenu = document.getElementById(`menuIcon`);
+            // const $elMenu = this.menuIcon;
             const durationMenu = 1; const fromMenu = {x:'0',rotation:0};
             TweenMax.to($elMenu, durationMenu, fromMenu);
 
@@ -48,6 +55,8 @@ class RightMenu extends Component {
             TweenMax.to($el, duration, from);
 
             const $elMenu = document.getElementById(`menuIcon`);
+            // const $elMenu = this.menuIcon;
+
             const durationMenu = 1; const fromMenu = {x:'300x'};
             TweenMax.to($elMenu, durationMenu, fromMenu);
 
@@ -93,16 +102,16 @@ class RightMenu extends Component {
     }
     render() {
         return (
-            <div>
+            <div  className='menuIcon '>
                 <div >
                     <div className='redRightMenu' id='rightMenu'>
 
                     </div>
              <span className='menuText' id='textMenu1'>menu</span>
              <span className='menuText2' id='textMenu2'>close</span>
-                    <div onClick={this.handelMoveRightMenu.bind(this)} className='menuIcon ' id='menuIcon' onMouseOver={this.handelHover.bind(this)} >
+                    <div onClick={this.handelMoveRightMenu.bind(this)}  ref={this.menuIcon} id='menuIcon' onMouseEnter={this.handelHover.bind(this)} >
 
-                        <div className='position-relative '  onClick={this.handelMoveRightMenu.bind(this)} >
+                        <div className='position-relative'  onClick={this.handelMoveRightMenu.bind(this)} >
                             <img src={img} alt="img" className='menuIconTop' id="menuIconTop"  onClick={this.handelMoveRightMenu.bind(this)} />
                             <img src={img} alt="img"  className='menuIconCenter' id="menuIconCenter"  onClick={this.handelMoveRightMenu.bind(this)}/>
                             <img src={img} alt="img" className='menuIconButton' id="menuIconButton"  onClick={this.handelMoveRightMenu.bind(this)}/>
