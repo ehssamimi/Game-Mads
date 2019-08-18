@@ -18,7 +18,7 @@ class FirstPage extends Component {
             <div >
                 <div className='firstPage position-relative'>
                     <img src={top} alt="top" className='topFirstPage' />
-                    <div className='position-relative'>
+                    <div >
                         <img src={man} alt="top" className='man'/>
                     </div>
 

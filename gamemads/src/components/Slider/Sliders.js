@@ -7,7 +7,7 @@ const items = [
     {
         id: 1,
         title: "Homemade Cheesecake with Fresh Berries and Mint",
-        img: {img},
+        img: img,
         detail: "10.12.2019",
         category: "Cupcakes",
         badges: [
@@ -24,7 +24,7 @@ const items = [
     {
         id: 2,
         title: "Wedding Cake with Flowers Macarons and Blueberries",
-        img: {img},
+        img: img,
         detail: "01.06.2019",
         category: "Cakes",
         badges: [
@@ -41,7 +41,7 @@ const items = [
     {
         id: 3,
         title: "Cheesecake with Chocolate Cookies and Cream Biscuits",
-        img: "/assets/img/card-thumb-3.jpg",
+        img: img,
         detail: "27.05.2019",
         category: "Cupcakes",
         badges: [
@@ -54,7 +54,7 @@ const items = [
     {
         id: 4,
         title: "Homemade Cheesecake with Fresh Berries and Mint",
-        img: "/assets/img/card-thumb-1.jpg",
+        img: img,
         detail: "10.12.2019",
         category: "Cakes",
         badges: [
@@ -67,7 +67,7 @@ const items = [
     {
         id: 5,
         title: "Homemade Cheesecake with Fresh Berries and Mint",
-        img: "/assets/img/card-thumb-1.jpg",
+        img: img,
         detail: "10.12.2019",
         category: "Cakes",
         badges: [
@@ -82,38 +82,39 @@ const items = [
 const BasicCarouselItem = ({ title, img, detail, badges }) => {
     return (
         <div className="pr-3 pl-3">
-            <Card className="flex-row">
-                <div className="w-50 position-relative">
+            <div className="flex-row">
+                {/*<div className="w-100 position-relative parentDiv mt-3">*/}
+                <div className="w-100 position-relative parentDiv">
                     <img className="card-img-left" src={img} alt={title} />
-                    {badges &&
-                    badges.map((b, index) => {
-                        return (
-                            <span
-                                key={index}
-                                className={`badge badge-pill badge-${
-                                    b.color
-                                    } position-absolute ${
-                                    index === 0
-                                        ? "badge-top-left"
-                                        : "badge-top-left-" + (index + 1)
-                                    }`}
-                            >
-                  {b.title}
-                </span>
-                        );
-                    })}
+                    {/*{badges &&*/}
+                    {/*badges.map((b, index) => {*/}
+                        {/*return (*/}
+                            {/*<span*/}
+                                {/*key={index}*/}
+                                {/*className={`badge badge-pill badge-${*/}
+                                    {/*b.color*/}
+                                    {/*} position-absolute ${*/}
+                                    {/*index === 0*/}
+                                        {/*? "badge-top-left"*/}
+                                        {/*: "badge-top-left-" + (index + 1)*/}
+                                    {/*}`}*/}
+                            {/*>*/}
+                  {/*{b.title}*/}
+                {/*</span>*/}
+                        {/*);*/}
+                    {/*})}*/}
                 </div>
-                <div className="w-50">
-                    <CardBody>
-                        <h6 className="mb-4">{title}</h6>
-                        <footer>
-                            <p className="text-muted text-small mb-0 font-weight-light">
-                                {detail}
-                            </p>
-                        </footer>
-                    </CardBody>
-                </div>
-            </Card>
+                {/*<div className="w-50">*/}
+                    {/*<CardBody>*/}
+                        {/*<h6 className="mb-4">{title}</h6>*/}
+                        {/*<footer>*/}
+                            {/*<p className="text-muted text-small mb-0 font-weight-light">*/}
+                                {/*{detail}*/}
+                            {/*</p>*/}
+                        {/*</footer>*/}
+                    {/*</CardBody>*/}
+                {/*</div>*/}
+            </div>
         </div>
     );
 };
@@ -128,7 +129,8 @@ class Sliders extends Component {
                         1000: 2,
                         1400: 3
                     }}
-                    loop={false}
+                    loop={true}
+                    controls={false}
                 >
                     {items.map(item => {
                         return (

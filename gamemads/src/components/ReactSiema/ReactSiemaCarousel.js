@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
 import ReactSiema from "./lib";
+import { FaChevronRight,FaChevronLeft } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 export default class ReactSiemaCarousel extends Component {
   constructor(props) {
@@ -95,35 +97,53 @@ export default class ReactSiemaCarousel extends Component {
   render() {
     return (
       <Fragment>
-        <ReactSiema
-          ref="slider"
-          onResize={perPage => {
-            this.setState({
-              perPage: perPage
-            });
-          }}
-          updateAfterDrag={this.updateAfterDrag}
-          {...this.props}
-        >
-          {this.props.children}
-        </ReactSiema>
+        {/*<div className='pr-5 pl-5'>*/}
+            <ReactSiema
+                ref="slider"
+                onResize={perPage => {
+                    this.setState({
+                        perPage: perPage
+                    });
+                }}
+                updateAfterDrag={this.updateAfterDrag}
+                {...this.props}
+            >
+                {this.props.children}
+            </ReactSiema>
+        {/*</div>*/}
+
+
+          <IconContext.Provider value={{ className: "prevArrow" }}>
+              <div   onClick={() => this.gotoPrev()}>
+                  <FaChevronLeft />
+              </div>
+          </IconContext.Provider>
+
         {this.props.controls !== false && (
           <div className="slider-nav text-center">
             <button
               className="left-arrow btn btn-link"
               onClick={() => this.gotoPrev()}
             >
-              <i className="simple-icon-arrow-left" />
+                <FaChevronLeft className='text-white'/>
+
+              {/*<i className="simple-icon-arrow-left" />*/}
             </button>
             <div className="slider-dot-container">{this.renderDots()}</div>
             <button
               className="left-arrow btn btn-link"
               onClick={() => this.gotoNext()}
             >
-              <i className="simple-icon-arrow-right" />
+              <FaChevronRight/>
+              {/*<i className="simple-icon-arrow-right" />*/}
             </button>
           </div>
         )}
+          <IconContext.Provider value={{ className: "forwardArrow" }}>
+              <div   onClick={() =>this.gotoNext()}>
+                  <FaChevronRight />
+              </div>
+          </IconContext.Provider>
       </Fragment>
     );
   }

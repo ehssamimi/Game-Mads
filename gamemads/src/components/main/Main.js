@@ -3,6 +3,8 @@ import RightMenu from "../RightMenu/RightMenu";
 import FirstPage from "../FirstPage/FirstPage";
 import SecondPage from "../SecondPages/SecondPage";
 import ThirdPages from "../thirdPages/thirdPages";
+import FourthPages from "../fourthPages/FourthPages";
+import FivethPage from "../FivethPage/FivethPage";
 
 class Main extends Component {
     render() {
@@ -13,6 +15,8 @@ class Main extends Component {
                     <FirstPage/>
                     <SecondPage/>
                     <ThirdPages/>
+                    <FourthPages/>
+                    <FivethPage/>
 
                 </div>
 
